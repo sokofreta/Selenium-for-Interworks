@@ -1,13 +1,14 @@
-package Tests;
+package Tests.LoginTests;
 
 import Pages.InventoryPage.InventoryPage;
 import Pages.Login.LoginPage;
+import Tests.TestBase;
 import Utils.Log;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
-public class LoginPageTests extends TestBase{
+public class LoginPageTests extends TestBase {
     private String validUserName = "standard_user";
     private String validPassword = "secret_sauce";
     private String invalidPassword = "invalidPassword";

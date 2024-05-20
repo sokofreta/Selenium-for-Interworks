@@ -1,6 +1,8 @@
-package Tests;
+package Tests.CartTests;
 
 import Pages.Cart.CheckoutStepOnePage;
+import Tests.InventoryTests.InventoryPageTest;
+import Tests.TestBase;
 import Utils.Log;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;

@@ -1,12 +1,13 @@
-package Tests;
+package Tests.CartTests;
 
 import Pages.Cart.CheckoutStepOnePage;
 import Pages.Cart.CheckoutStepTwoPage;
+import Tests.TestBase;
 import Utils.Log;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-public class CheckoutStepOnePageTest extends TestBase{
+public class CheckoutStepOnePageTest extends TestBase {
 
     private String validFirstName = "Sokratis";
     private String validLastName = "Seitanidis";

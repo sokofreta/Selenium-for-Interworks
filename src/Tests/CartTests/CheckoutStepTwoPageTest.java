@@ -1,6 +1,7 @@
-package Tests;
+package Tests.CartTests;
 
 import Pages.Cart.CheckoutStepTwoPage;
+import Tests.TestBase;
 import Utils.Log;
 import org.testng.annotations.Test;
 

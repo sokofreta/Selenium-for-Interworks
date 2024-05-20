@@ -1,8 +1,8 @@
-package Tests;
+package Tests.InventoryTests;
 
-import Pages.BasePage;
 import Pages.InventoryPage.InventoryPage;
-import Pages.Login.LoginPage;
+import Tests.LoginTests.LoginPageTests;
+import Tests.TestBase;
 import Utils.Log;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
