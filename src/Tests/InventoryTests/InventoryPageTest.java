@@ -10,27 +10,25 @@ import Pages.Cart.CartPage;
 
 public class InventoryPageTest extends TestBase {
 
-    private String validUserName = "standard_user";
-    private String validPassword = "secret_sauce";
-
+    //Test για την εισαγωγή αντικειμένων στο καλάθι
     @Test
+    public void AddItemsToCart(WebDriver driver,int TestCase){
 
-    public void AddItemsToCart(WebDriver driver,boolean display,int numberOfItems){
-        if(display){
-            Log.info("Start Test : 'Add Item to Cart'");
-        }
+        //Προσπάθεια για την επιτυχή σύνδεση του χρήστη
         LoginPageTests loginTest = new LoginPageTests();
-        loginTest.TestSuccessfulLogin(driver,false);
+        loginTest.TestSuccessfulLogin(driver);
 
+        //Εισαγωγή αντικειμένων ανάλογα με το Test
         InventoryPage inventoryPage = new InventoryPage(driver);
-        inventoryPage.AddItems(numberOfItems);
+        inventoryPage.AddItems(TestCase);
 
+        //Έλεγχος μετάβασης στο σωστό URL
         CartPage cart = new CartPage(driver);
         cart.VerifyCurrentUrl(cart.CartPageUrl);
+
+        //Ενημέρωση για την εισαγωγή αντικειμένων
         Log.info("Add Item(s) to cart");
-        if(display){
-            Log.info("End Test : 'Add Item to Cart'");
-        }
+
     }
 
 }

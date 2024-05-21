@@ -4,7 +4,7 @@ import Pages.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.Assert;
+
 
 public class InventoryPage extends BasePage {
 
@@ -25,13 +25,13 @@ public class InventoryPage extends BasePage {
     @FindBy(id = "shopping_cart_container")
     private WebElement Cart;
 
-    public void AddItems(int numberOfItems){
+    public void AddItems(int TestCase){
         driver.get(inventoryPageUrl);
         driver.navigate().refresh();
-        if(numberOfItems < 2){
+        if(TestCase == 1){
             addToCartBikeLight.click();
         }
-        if(numberOfItems > 1) {
+        if(TestCase == 2) {
             addToCartBackPack.click();
             addToCartFleeceJacket.click();
         }

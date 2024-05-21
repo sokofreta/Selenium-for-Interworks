@@ -10,23 +10,24 @@ import Pages.Cart.CartPage;
 
 public class CartTest extends TestBase {
 
+    //Test για την επισκόπηση του καλαθιού αγορών σύμφωνα με το testCase
     @Test
-    public void TestCheckout(WebDriver driver,boolean display,int numberOfItems){
-        if(display){
-            Log.info("Start Test Case : 'TestCheckoutStepOne' ");
-        }
-        InventoryPageTest inventoryTest = new InventoryPageTest();
-        inventoryTest.AddItemsToCart(driver,false,numberOfItems);
+    public void TestCheckout(WebDriver driver,int TestCase){
 
+        //Προσθήκη αντικειμένων σύμφωνα με το TestCase
+        InventoryPageTest inventoryTest = new InventoryPageTest();
+        inventoryTest.AddItemsToCart(driver,TestCase);
+
+        //Μετάβαση στη σελίδα για πληρωμή
         CartPage cart = new CartPage(driver);
         cart.Checkout();
 
+        //Έλεγχος μετάβασης στο σωστό URL
         CheckoutStepOnePage cartStepOne = new CheckoutStepOnePage(driver);
         cartStepOne.VerifyCurrentUrl(cartStepOne.CartStepOnePageUrl);
+
+        //Ενημέρωση επιτυχούς μεταφοράς στο στάδιο πληρωμής
         Log.info("Passing to Step One");
-        if(display) {
-            Log.info("End Test Case : 'TestCheckoutStepOne' ");
-        }
 
     }
 

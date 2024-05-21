@@ -29,14 +29,4 @@ public class LoginPage extends BasePage {
         passwordInput.sendKeys(password);
         loginButton.click();
     }
-
-    public void ErrorMessageDisplayed() {
-        Assert.assertTrue(errorMessage.isDisplayed(), "Error message is not displayed on the page.");
-        VerifyCurrentUrl(loginPageUrl);
-    }
-
-    public void VerifyErrorMessageText(String expectedErrorMessage) {
-        String actualErrorMessage = errorMessage.getText();
-        Assert.assertEquals(actualErrorMessage, expectedErrorMessage, "Error message text does not match.");
-    }
 }
