@@ -17,7 +17,7 @@ public class CheckoutStepOnePageTest extends TestBase {
     //Test για τη λανθασμένη εισαγωγή στοιχείων
     @Test
     public void CheckoutStepOneErrorValidation(){
-        Log.info("Start Test Case : 'StepOneErrorValidation Test' ");
+        Log.info("Start Test Case : 'Checkout Step One Error Validation Test' ");
 
         //Επισκόπηση του καλαθιού αγορών
         CartTest cartTest = new CartTest();
@@ -33,7 +33,7 @@ public class CheckoutStepOnePageTest extends TestBase {
         //Ενημέρωση για τη λανθασμένη εισαγωγή στοιχείων
         Log.info("Invalid inputs of forum");
 
-        Log.info("End Test Case : 'StepOneErrorValidation Test' ");
+        Log.info("End Test Case : 'Checkout Step One Error Validation Test' ");
 
     }
 

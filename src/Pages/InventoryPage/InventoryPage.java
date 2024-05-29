@@ -8,9 +8,8 @@ import org.openqa.selenium.support.FindBy;
 
 public class InventoryPage extends BasePage {
 
-    public InventoryPage(WebDriver driver) {
-        super(driver);
-    }
+
+    //URL of the correct page
     public String inventoryPageUrl = "https://www.saucedemo.com/inventory.html";
 
     @FindBy(id = "add-to-cart-sauce-labs-backpack")
@@ -25,17 +24,30 @@ public class InventoryPage extends BasePage {
     @FindBy(id = "shopping_cart_container")
     private WebElement Cart;
 
+
+    //Default constructor
+    public InventoryPage(WebDriver driver) {
+        super(driver);
+    }
+
+    //Function that adds the correct items depends on the test case
     public void AddItems(int TestCase){
+        //Tell the driver where to go
         driver.get(inventoryPageUrl);
         driver.navigate().refresh();
+
+        //If the TestCase is the first add only the one item
         if(TestCase == 1){
             addToCartBikeLight.click();
         }
+
+        //If the TestCase is the second add the two items
         if(TestCase == 2) {
             addToCartBackPack.click();
             addToCartFleeceJacket.click();
         }
 
+        //Navigate to Cart page
         Cart.click();
     }
 

@@ -7,11 +7,12 @@ import org.testng.annotations.Test;
 
 public class CheckoutStepTwoPageTest extends TestBase {
 
-    //Test για την εξακρίβωση τιμών προϊόντων
+
     @Test
+    //Test για την εξακρίβωση τιμών προϊόντων
     public void CheckoutStepTwoValidation(){
 
-        Log.info("Start Test Case : 'StepOneErrorValidation Test' ");
+        Log.info("Start Test Case : 'Checkout Step Two Validation Test' ");
 
         //Επιτυχή συμπλήρωση της φόρμα στοιχείων
         CheckoutStepOnePageTest cartStepOne = new CheckoutStepOnePageTest();
@@ -21,6 +22,6 @@ public class CheckoutStepTwoPageTest extends TestBase {
         CheckoutStepTwoPage checkoutStepTwo = new CheckoutStepTwoPage(driver);
         checkoutStepTwo.CheckPrices();
 
-        Log.info("End Test Case : 'StepOneErrorValidation Test' ");
+        Log.info("End Test Case : 'Checkout Step Two Validation Test' ");
     }
 }
