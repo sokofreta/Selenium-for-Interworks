@@ -7,7 +7,7 @@ import Utils.Log;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-public class CheckoutStepOnePageTest extends TestBase {
+public class CheckoutFirstStepPageTest extends TestBase {
 
     private String validFirstName = "Sokratis";
     private String validLastName = "Seitanidis";

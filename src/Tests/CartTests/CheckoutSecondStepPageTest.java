@@ -5,7 +5,7 @@ import Tests.TestBase;
 import Utils.Log;
 import org.testng.annotations.Test;
 
-public class CheckoutStepTwoPageTest extends TestBase {
+public class CheckoutSecondStepPageTest extends TestBase {
 
 
     @Test
@@ -15,7 +15,7 @@ public class CheckoutStepTwoPageTest extends TestBase {
         Log.info("Start Test Case : 'Checkout Step Two Validation Test' ");
 
         //Επιτυχή συμπλήρωση της φόρμα στοιχείων
-        CheckoutStepOnePageTest cartStepOne = new CheckoutStepOnePageTest();
+        CheckoutFirstStepPageTest cartStepOne = new CheckoutFirstStepPageTest();
         cartStepOne.CheckoutStepOneValidation(driver,2);
 
         //Εμφάνιση τιμών προϊόντων ατομικά και συνολικά
